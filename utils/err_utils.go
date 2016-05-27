@@ -1,5 +1,7 @@
 package utils
 
-func PanicError(err error)  {
+import "fmt"
 
+func PanicError(err error)  {
+	fmt.Println(err)
 }

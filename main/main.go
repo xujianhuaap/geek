@@ -31,7 +31,7 @@ func (this *MainController) Get() {
 func (this *MainController)Post() {
 	ctx:=this.Ctx;
 	if(strings.Contains(ctx.Request.RequestURI,controller.API_USER_REGISTER)){
-		user:=models.User{"xujianhua",001,27,true}
+		user:=&(models.User{"xujianhua",001,27,true})
 		_,err:=ormer.Insert(user)
 		var response models.Response
 		if(err!=nil){
@@ -68,5 +68,7 @@ func init()  {
 	maxConnect:=30;//最大的在线访问
 	//orm.RegisterDriver("mysql", orm.DRMySQL) mysql已经默认注册过了
 	orm.RegisterDataBase("default","mysql","root:123456@/orm_geek?charset=utf8",maxIdle,maxConnect)
+	orm.RunSyncdb("default",false,true)//自动创建表
 }
+
 
