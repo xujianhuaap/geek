@@ -7,8 +7,8 @@ import (
 
 type User struct  {
 	Name string `orm:"no null"`
-	Userid int `orm:"pk;auto"` //设置为主键
-	Age int
+	UserId int64 `orm:"pk;auto"` //设置为主键
+	Age int64
 	Gender bool //true man;false:womamn
 }
 

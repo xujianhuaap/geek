@@ -29,7 +29,7 @@ var Apis=[]string{
 }
 // http:// 192.168.23.51:9090/welcome
 // http://192.168.23.60:9090/user/register
-// http:// 192.168.23.51:9090/user/favourite
+// http:// 192.168.23.83:9090/user/favourite
 // http:// 192.168.23.51:9090/product
 // http:// 192.168.23.51:9090/deal
 
